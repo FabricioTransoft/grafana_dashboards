@@ -39,6 +39,7 @@
             "inspect": false
           },
           "mappings": [],
+          "noValue": "No issues detected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -94,7 +95,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 1020
+                "value": 1787
               }
             ]
           },
@@ -166,7 +167,7 @@
         ]
       },
       "gridPos": {
-        "h": 8,
+        "h": 13,
         "w": 16,
         "x": 0,
         "y": 0
@@ -409,7 +410,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 100
+                "value": 108
               }
             ]
           },
@@ -460,14 +461,14 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 617
+                "value": 986
               }
             ]
           }
         ]
       },
       "gridPos": {
-        "h": 8,
+        "h": 13,
         "w": 8,
         "x": 16,
         "y": 0
@@ -518,7 +519,7 @@
                 ]
               },
               "params": [
-                "^(.*?):"
+                "^[^:]+"
               ],
               "text": "setAliasByRegex()"
             }
@@ -531,7 +532,7 @@
             "filter": "/.*/"
           },
           "item": {
-            "filter": "/.*Zabbix agent avai/"
+            "filter": "/.*agent avai.*/"
           },
           "itemTag": {
             "filter": "component: system"
@@ -566,7 +567,7 @@
           }
         }
       ],
-      "title": "Servers Status",
+      "title": "",
       "transformations": [
         {
           "id": "sortBy",
@@ -669,10 +670,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
+        "h": 10,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 13
       },
       "id": 2,
       "interval": "1m",
@@ -875,10 +876,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
+        "h": 10,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 13
       },
       "id": 3,
       "interval": "1m",
@@ -1086,10 +1087,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
+        "h": 10,
         "w": 12,
         "x": 0,
-        "y": 14
+        "y": 23
       },
       "id": 6,
       "interval": "3m",
@@ -1191,7 +1192,7 @@
           }
         }
       ],
-      "title": "Total Bits Received",
+      "title": "Download Mb/s",
       "transformations": [
         {
           "id": "sortBy",
@@ -1296,10 +1297,10 @@
         ]
       },
       "gridPos": {
-        "h": 6,
+        "h": 10,
         "w": 12,
         "x": 12,
-        "y": 14
+        "y": 23
       },
       "id": 7,
       "interval": "3m",
@@ -1401,7 +1402,7 @@
           }
         }
       ],
-      "title": "Total Bits Sent",
+      "title": "Upload Mb/s",
       "transformations": [
         {
           "id": "sortBy",
@@ -1501,13 +1502,38 @@
           },
           "unit": "decbits"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Available Size"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "center"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Filesystem"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 616
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 5,
+        "h": 9,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 33
       },
       "id": 8,
       "interval": "1m",
@@ -1521,7 +1547,8 @@
           ],
           "show": false
         },
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": []
       },
       "pluginVersion": "12.1.1",
       "targets": [
@@ -1593,7 +1620,7 @@
           }
         }
       ],
-      "title": "Filesystem",
+      "title": "",
       "transformations": [
         {
           "id": "sortBy",
@@ -1779,7 +1806,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 289
+                "value": 213
               }
             ]
           },
@@ -1794,14 +1821,26 @@
                 "value": 127
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "RAM"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 242
+              }
+            ]
           }
         ]
       },
       "gridPos": {
-        "h": 5,
+        "h": 9,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 33
       },
       "id": 9,
       "interval": "1m",
@@ -1970,5 +2009,5 @@
   "timezone": "browser",
   "title": "Main",
   "uid": "0b759102-53bb-4125-91fc-31141daf7b0d",
-  "version": 79
+  "version": 143
 }

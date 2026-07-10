@@ -611,7 +611,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 11,
         "w": 12,
         "x": 0,
         "y": 5
@@ -743,7 +743,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 11,
         "w": 12,
         "x": 12,
         "y": 5
@@ -965,10 +965,10 @@
         ]
       },
       "gridPos": {
-        "h": 9,
+        "h": 12,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 16
       },
       "id": 5,
       "interval": "3m",
@@ -1294,10 +1294,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 13,
         "w": 7,
         "x": 0,
-        "y": 22
+        "y": 28
       },
       "id": 11,
       "options": {
@@ -1509,10 +1509,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 13,
         "w": 17,
         "x": 7,
-        "y": 22
+        "y": 28
       },
       "id": 14,
       "interval": "1m",
@@ -1585,14 +1585,15 @@
     }
   ],
   "preload": false,
+  "refresh": "30s",
   "schemaVersion": 41,
   "tags": [],
   "templating": {
     "list": [
       {
         "current": {
-          "text": "TecnoMobile",
-          "value": "TecnoMobile"
+          "text": "Transoft",
+          "value": "Transoft"
         },
         "definition": "",
         "description": "",
@@ -1614,8 +1615,8 @@
       {
         "allowCustomValue": false,
         "current": {
-          "text": "Tecview Energia",
-          "value": "Tecview Energia"
+          "text": "SRV32",
+          "value": "SRV32"
         },
         "definition": "",
         "name": "host",
@@ -1643,5 +1644,5 @@
   "timezone": "browser",
   "title": "Linux Servers",
   "uid": "adptt5j",
-  "version": 58
+  "version": 60
 }
